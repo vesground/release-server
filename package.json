@@ -1,6 +1,6 @@
 {
   "name": "electron-updater-example",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
@@ -19,6 +19,11 @@
   "build": {
     "appId": "com.github.iffy.electronupdaterexample",
     "afterSign": "./build/notarize.js",
+    "publish": [{
+      "provider": "github",
+      "owner": "vesground",
+      "repo": "release-server"
+    }],
     "mac": {
       "category": "your.app.category.type"
     },
